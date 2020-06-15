@@ -42,11 +42,11 @@ See the **this project EEVBlog thread** for methods of characterizing the amplit
 
 In principal the same method could be applied to any scope brand or model. The only thing that should change would be the scope characterization profile and the specific way to connect to the scope, but PyVisa supports many brands and different models, by USB and by LAN. 
 
-### **A** - Siglent SDS2104-Plus 100 MHz for up to 945 MHz equalization
+### **A** - Siglent SDS2104-Plus 100 MHz - equalization from 0 Hz to 945 MHz 
 
 The first scope model that the software will be targeting is the 100 MHz Siglent SDS2104-Plus 2GSa 8bit with a small hack to 570 MHz -3dB bandwidth. But that has a frontend that can show signals even at least at 945 MHz. If they are attenuated and phase shifted at each frequency, in principal that can be corrected and the signal reconstructed up to the max limit, in this case 945 MHz.
 
-### **B** - Rigol DS1104Z 100 MHz for maybe up 300 MHz to 400 MHz equalization
+### **B** - Rigol DS1104Z 100 MHz - equalization from 0 Hz maybe to 300 MHz to 400 MHz
 
 This will be the second scope targeted by this program.
 
