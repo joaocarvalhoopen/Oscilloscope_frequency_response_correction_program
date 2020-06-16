@@ -105,7 +105,7 @@ Following is the validation ... <br>
 [Performa01 post](https://www.eevblog.com/forum/testgear/siglent-sds2000x-plus-coming/msg2787168/#msg2787168) <br>
 <br>
 The FFT input image that we will extract the data. <br>
-![The FFT input image that we will extract the data](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
+![The FFT input image that we will extract the data](https://github.com/joaocarvalhoopen/Oscilloscope_frequency_response_correction_program/blob/master/Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
 <br>
 Data interpolated from the extracted FFT input image. <br>
 ![Program output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/output_example_of_interpolated_values_that_exist_in_the_image.png) <br>
