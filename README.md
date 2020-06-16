@@ -14,6 +14,27 @@ I put it under **Test Equipment**.<br>
 Topic: **Oscilloscope frequency response correction program** <br>
 [https://www.eevblog.com/forum/testgear/oscilloscope-frequency-response-correction-program/](https://www.eevblog.com/forum/testgear/oscilloscope-frequency-response-correction-program/) <br>
 
+## What is the problem that I am trying to solve?
+
+When you see a signal on the scope, that it is made with components with frequêncies of up to 10 % or 20 % of the bandwidth of the scope, the signal will be correctly represented on the scope screen. <br>
+<br>
+But if the signal, although appearing to be a low frequency signal, has some high frequency components in it along the lower frequency components, all it's components will be summed up and generate the final shape of the signal. But those high frequency components will suffer more with two forms of distortion. They will have a lower amplitude (lower volts, greater attenuation) and they will have a greater phase-shift (in time. That means that they will take more time to arrive at the scopes ADC while running along the signal path, that in relation to the lower frequency signal components). <br>   
+<br>
+Because all those sinusoids are summed up at the same time instant, when the ADC takes a sample, "a photograph in as instant", if some of them have there peaks and lower parts of the wave with different amplitudes for different frequencies (**different attenuations by frequency**) and **if their peaks and lower parts of the wave are not synchronized in time**, the final signal that you will see **will not be a very accurate representation of the real signal** that you are trying to measure at the tip of the scope probe or the tip of the coaxial cable.<br>  
+<br>
+To see this problem in action see the following thread image test or experiment that I demonstrate in the post of the EEVBlog thread that I created for this project. <br> 
+<br>
+The same signal is compared in the same oscilloscope, when the frequencies if their components are much lower then the bandwidth of the scope and when they are high when compared to the bandwidth of the scope. To make this test I used the fact that the scope can save a wave form in channel REF_A and that and that the oscilloscope as an option to lower it's bandwidth. <br>
+<br>
+Experiment that illustrates the problem.<br>
+![Experiment that illustrates the problem](./Siglent_SDS2104_Plus/Data_collected/SDS2504X_Plus_PNG_2.png) <br>
+<br>
+[Experiment in EEVBlog post](https://www.eevblog.com/forum/testgear/oscilloscope-frequency-response-correction-program/msg3095744/#msg3095744) <br>
+<br>
+The program tries to make this equalization or correction and invert or reverse the effect of attenuation in amplitude and phase-shift at each of the signal frequencies.<br> 
+<br>
+This idea can be applied to any scope and this project will try to support some scopes.
+
 ## Components that influence a scope frequency response because they are on the signal path
 
 - Scope probe frequency response or connected coaxial cable frequency response.
