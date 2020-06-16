@@ -65,7 +65,7 @@ This will possibly be the third scope targeted by this program.
 ## **A** - Siglent SDS2104-Plus .... current progress
 
 This code is under the directory. <br>
-[Siglent_SDS2104_Plus directory](.//Siglent_SDS2104_Plus//) <br>
+[Siglent_SDS2104_Plus directory](./Siglent_SDS2104_Plus/) <br>
 
 ### **A1** - Measured data of the scope for 8 bit vs 10 bit mode from 0 Hz to 120 MHz
 
@@ -88,10 +88,10 @@ So I took the following measurements of **1 Vpp** at **8 bits** and at **10 bits
 ### **A2** - Measured data for 20 MHz bandwidth limit 8 bit mode from 0 Hz to 40 MHz
 
 Data points png with graphs of attenuation and phase-shift. <br>
-![Attenuation image](.//Siglent_SDS2104_Plus/Data_collected/Charact_freq_response_ampl_phase_shift_20MHz_bandwidth_limited.png) <br>
+![Attenuation image](./Siglent_SDS2104_Plus/Data_collected/Charact_freq_response_ampl_phase_shift_20MHz_bandwidth_limited.png) <br>
 <br>
 The excel file is:<br>
-[Attenuation excel file](.//Siglent_SDS2104_Plus/Data_collected/Osciloscope_20MHz_bandwidth_limit_v04.xlsx) <br>
+[Attenuation excel file](./Siglent_SDS2104_Plus/Data_collected/Osciloscope_20MHz_bandwidth_limit_v04.xlsx) <br>
 
 ### **A3** - Program that extracts the attenuation data points of an FFT graph 
 
@@ -105,28 +105,28 @@ Following is the validation ... <br>
 [Performa01 post](https://www.eevblog.com/forum/testgear/siglent-sds2000x-plus-coming/msg2787168/#msg2787168) <br>
 <br>
 The FFT input image that we will extract the data. <br>
-![The FFT input image that we will extract the data](.//Siglent_SDS2104_Plus//extract_attenuation_values_from_scope_fft_image//img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
+![The FFT input image that we will extract the data](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
 <br>
 Data interpolated from the extracted FFT input image. <br>
-![Program output image](.//Siglent_SDS2104_Plus//extract_attenuation_values_from_scope_fft_image//output_example_of_interpolated_values_that_exist_in_the_image.png) <br>
+![Program output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/output_example_of_interpolated_values_that_exist_in_the_image.png) <br>
 <br>
 FFT output image with extracted data points supper imposed. Note: When there were more then one vertical plot data pixel I average the position to the vertical middle of the blob.<br>
-![FFT validation output image](.//Siglent_SDS2104_Plus//extract_attenuation_values_from_scope_fft_image//output_out/output_debug_img.png) <br>
+![FFT validation output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/output_out/output_debug_img.png) <br>
 <br>
-This program **code** is in [Siglent_SDS2104_Plus directory](.//Siglent_SDS2104_Plus//extract_attenuation_values_from_scope_fft_image//) <br>
+This program **code** is in [Siglent_SDS2104_Plus directory](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/) <br>
 <br>
-The **main program file** is [extract_attenuation_values_from_scope_fft_image.py](.//Siglent_SDS2104_Plus//Extract_attenuation_values_from_scope_FFT_image//extract_attenuation_values_from_scope_fft_image.py) <br>
+The **main program file** is [extract_attenuation_values_from_scope_fft_image.py](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/extract_attenuation_values_from_scope_fft_image.py) <br>
 <br>
 The CSV data files extracted are: <br>
-[dbVAttenuationTable_OriginalFreq_0_to_1_GHz.csv](.//Siglent_SDS2104_Plus//Extract_attenuation_values_from_scope_FFT_image//output_out//dbVAttenuationTable_OriginalFreq_0_to_1_GHz.csv) <br>
-[dbVAttenuationTable_interpol_10M_step_0_to_1_GHz.csv](.//Siglent_SDS2104_Plus//Extract_attenuation_values_from_scope_FFT_image//output_out/dbVAttenuationTable_interpol_10M_step_0_to_1_GHz.csv) <br>
-[dbVAttenuationTable_interpol_1M_step_0_to_1_GHz.csv](.//Siglent_SDS2104_Plus//Extract_attenuation_values_from_scope_FFT_image//output_out//dbVAttenuationTable_interpol_1M_step_0_to_1_GHz.csv) <br>
+[dbVAttenuationTable_OriginalFreq_0_to_1_GHz.csv](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/output_out/dbVAttenuationTable_OriginalFreq_0_to_1_GHz.csv) <br>
+[dbVAttenuationTable_interpol_10M_step_0_to_1_GHz.csv](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/output_out/dbVAttenuationTable_interpol_10M_step_0_to_1_GHz.csv) <br>
+[dbVAttenuationTable_interpol_1M_step_0_to_1_GHz.csv](./Siglent_SDS2104_Plus//Extract_attenuation_values_from_scope_FFT_image/output_out/dbVAttenuationTable_interpol_1M_step_0_to_1_GHz.csv) <br>
 
 
 ## **B** - Rigol DS1104Z .... current progress
 
 This code is under the directory. <br>
-[Rigol_DS1104Z directory](.//Rigol_DS1104Z//) <br>
+[Rigol_DS1104Z directory](./Rigol_DS1104Z/) <br>
 <br>
 1. ....
 
