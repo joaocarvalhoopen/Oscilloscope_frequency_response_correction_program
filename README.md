@@ -105,15 +105,15 @@ Following is the validation ... <br>
 [Performa01 post](https://www.eevblog.com/forum/testgear/siglent-sds2000x-plus-coming/msg2787168/#msg2787168) <br>
 <br>
 The FFT input image that we will extract the data. <br>
-![The FFT input image that we will extract the data](https://github.com/joaocarvalhoopen/Oscilloscope_frequency_response_correction_program/blob/master/Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
+![The FFT input image that we will extract the data](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/img_in/SDS2354Xplus_2GSa_8bit_1GHz.png)<br>
 <br>
 Data interpolated from the extracted FFT input image. <br>
-![Program output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/output_example_of_interpolated_values_that_exist_in_the_image.png) <br>
+![Program output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/output_example_of_interpolated_values_that_exist_in_the_image.png) <br>
 <br>
 FFT output image with extracted data points supper imposed. Note: When there were more then one vertical plot data pixel I average the position to the vertical middle of the blob.<br>
-![FFT validation output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/output_out/output_debug_img.png) <br>
+![FFT validation output image](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/output_out/output_debug_img.png) <br>
 <br>
-This program **code** is in [Siglent_SDS2104_Plus directory](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_fft_image/) <br>
+This program **code** is in [Siglent_SDS2104_Plus directory](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/) <br>
 <br>
 The **main program file** is [extract_attenuation_values_from_scope_fft_image.py](./Siglent_SDS2104_Plus/Extract_attenuation_values_from_scope_FFT_image/extract_attenuation_values_from_scope_fft_image.py) <br>
 <br>
