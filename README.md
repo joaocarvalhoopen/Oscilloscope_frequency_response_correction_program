@@ -1,12 +1,12 @@
 # Oscilloscope frequency response correction program
 
-This is a program that tries to make "normal scopes" give a more accurate and more real representation of the actual signal. 
+This is a program that tries to make "normal scopes", give a more accurate and more real representation of the actual signals. 
 
 ## Description
 
-This is a project to correct (equalize) the scope frequency response of "many scopes" in a PC program connected to the scope. <br>
-When it is done (this project is on going), it will make a frequency domain equalization that will correct the scopes model specific frequency response, the amplitude attenuation and the phase-shift for each frequency that the input signal is composed, Then it will reconstruct the time domain signal so that it can be visualized, analyzed and uploaded to the scope REF_A channel for direct comparison with other signals. <br>
-This is nothing new, a similar equalization is made is MIMO WiFi Routers and 5G. One of it's implementation is called SC-FME (Single Carrier - Frequency Domain Equalization).
+This is a project to correct (equalize) the scope frequency response of "many scopes" in a PC program that is connected to the scope by USB or LAN. <br>
+When it is done (this project is on going), it will make a frequency domain equalization that will correct the scopes model specific frequency response. The amplitude attenuation and the phase-shift at each frequency that the input signal is composed. Limited by the scope characteristics. Then it will reconstruct the time domain signal so that it can be visualized, analyzed and uploaded to the scope REF_A channel, for direct comparison with other signals. <br>
+This is nothing new, a similar equalization is made in the MIMO WiFi Routers and 5G mobile phones to reverse the effects of multi-path. One of it's implementation is called SC-FME (Single Carrier - Frequency Domain Equalization).
 
 ## Please see this project **EEVBlog thread** where many of the concepts that will be used are heavily detailed with history  
 
@@ -14,45 +14,46 @@ I put it under **Test Equipment**.<br>
 Topic: **Oscilloscope frequency response correction program** <br>
 [https://www.eevblog.com/forum/testgear/oscilloscope-frequency-response-correction-program/](https://www.eevblog.com/forum/testgear/oscilloscope-frequency-response-correction-program/) <br>
 
-## Components that influence a scope frequency response
+## Components that influence a scope frequency response because they are on the signal path
 
-- Scope probe frequency response or coaxial cable connected.
+- Scope probe frequency response or connected coaxial cable frequency response.
 - Input impedance selected (1 M Ohm or 50 Ohms)
 - Scope low noise amplifier frequency response in the front end.
 - Anti-aliasing filter before the input of the sampling ADC.
 - ADC (Analog to Digital Converter) sampling rate and general characteristics.
 <br>
-All those factor contribute to the frequency response of a scope. But they can be measure (characterized), and inverted by applying **FDE - Frequency Domain Equalization**. <br>
-See the **this project EEVBlog thread** for methods of characterizing the amplitude and the phase-shift for each frequency. The frequency response of the scope.
+All those factors contribute to the frequency response of a scope. But they can be measured (characterized), and inverted or reversed by applying **FDE - Frequency Domain Equalization**. <br>
+See the **this project EEVBlog thread** for methods of characterizing the amplitude and the phase-shift for each frequency. That is characterizing the frequency response of the scope.
 
 ## Steps needed
 
-1. For a given model, obtain the scope frequency response characterization from 0 Hz to half the ADC sampling frequency. This in terms of amplitude attenuation and phase-shift characterization for each frequency, ideally a sweep, but can also be in steps.
-2. Automate the tests (Optional, but a really good idea for fast characterization of different probes, or coaxial cables). 
-3. The program connects to the scope via open source PyVisa library.
+1. For a given model, get the scope frequency response characterization from 0 Hz to half the ADC sampling frequency. This in terms of amplitude attenuation and phase-shift characterization at each frequency. Ideally a frequency sweep, but can also be in steps.
+2. Automate the frequency response characterization (this is optional, but a really good idea for fast characterization of different probes, or coaxial cables, this can also be made by the community and the info used as simple data file for the program). 
+3. The program connects to the scope via PyVisa open source library.
 4. The processing will be ...
-   1. Read the buffer from the scope.
-   2. Do an FFT(signal), Fast Fourier Transform on the signal and transform it from the time domain into the frequency domain.
-   3. In the frequency domain, apply to each frequency the correction in terms of attenuation and phase-shift (the inverse). Note that this is not has simple as it locks because of FFT inter centered bin frequency components of the signal and because of the fact that window use would alter the signal reconstruction. In the frequency domain the use of machine learning to learn a general mapping could also be used. 
-   4. Do an iFFT( ), inverse Fast Fourier Transform on the frequency domain representation of the signal and reconstruct the original signal in the time domain, but more accurately, more close to the real signal.
-   5. Show it on the PC in a graph plot.
-5. Send it to the scope REF_A channel for comparison. 
+   1. Read the buffer from the scope by USB or LAN.
+   2. Do an FFT(signal), Fast Fourier Transform on the signal and transform it from the time domain (voltage amplitude vs time) into the frequency domain (amplitude vs frequency and phase-shift vs frequency).
+   3. In the frequency domain, apply to each frequency apply the inverse of the attenuation and phase-shift at each frequency and correct or equalize the signal. Note that this is not as simple as it locks. Mainly, because of FFT inter centered bin frequency components of the signal (give raise to inter bin leakage) and because of the fact that the use of pré-processing windows, would alter the quality of the signal reconstruction. In the frequency domain the use of machine learning to learn a general mapping of frequency equalization from fine grained characterization, could also be used. 
+   4. Then, do an iFFT( ), inverse Fast Fourier Transform on the frequency domain representation of the signal and reconstruct the original signal in the time domain. But more accurately, more close to the real signal.
+   5. Show it on the PC in a graph plot, so you can analyze it.
+5. Send it to the scope REF_A channel for comparison with other signals, if you want. 
 
 ## Oscilloscopes targeted
 
-In principal the same method could be applied to any scope brand or model. The only thing that should change would be the scope characterization profile and the specific way to connect to the scope, but PyVisa supports many brands and different models, by USB and by LAN. 
+In principal the same method could be applied to any scope brand or model. The only thing that should change would be the scope frequency response characterization profile and the specific way the program connects to the scope. But PyVisa supports many brands and different models, by USB and by LAN. 
 
-### **A** - Siglent SDS2104-Plus 100 MHz - equalization from 0 Hz to 945 MHz 
+### **A** - Siglent SDS2104-Plus 100 MHz - equalization from 0 Hz up to 945 MHz 
 
-The first scope model that the software will be targeting is the 100 MHz Siglent SDS2104-Plus 2GSa 8bit with a small hack to 570 MHz -3dB bandwidth. But that has a frontend that can show signals even at least at 945 MHz. If they are attenuated and phase shifted at each frequency, in principal that can be corrected and the signal reconstructed up to the max limit, in this case 945 MHz.
+This is the first scope model that I will be targeting with the software. It is a 100 MHz Siglent SDS2104-Plus with 2 ADC's, each with 2 Gig sample / sec. Having a resolution of 8 bits. This model can have a small hack that gives puts the -3dB attenuation mark on the 570 MHz (bandwidth). It's frontend, allows this scope to be used to analyse signals of up to 945 MHz. But with great attenuation. If the signal frequency components are only amplitude attenuated and phase-shifted at each frequency, that effects, in principal can be corrected or reversed. This is a normal scope effect, but if corrected (frequency domain equalized), the signal can be reconstructed with more fidelity up to it's frontend max limit of of 945 MHz. Each of the 2 ADC's are shared by each pair of 2 channels, totalizing 4 channels. If you use only one channel from the first pair (channel 1 or channel 2), and one channel from the second pair (channel 3 or channel 4), you will have the maximum possible frequency on two channels simultaneously.
 
-### **B** - Rigol DS1104Z 100 MHz - equalization from 0 Hz maybe to 300 MHz to 400 MHz
+### **B** - Rigol DS1104Z 100 MHz - equalization from 0 Hz maybe up to 300 MHz or 400 MHz
 
-This will be the second scope targeted by this program.
+This will be the second scope that I will target with this program.
+This scope as a bandwidth of 100 MHz at -3dB attenuation but in principal, it can be used to analyze signal of up to 300 MHz or 400 MHz. But they will be heavily attenuated and phase-shifted. The some program, with a different scope profile characterization, in principal will also correct this effect. This scope as a one 8 bit ADC at 1 Gig sample / second that is shared among all 4 channels. 
 
-### **C** - Siglent SDS1104X-E
+### **C** - Siglent SDS1104X-E 100 MHz - equalization from 0 Hz maybe to 300 MHz or 400 MHz
 
-This will possibly be the third scope targeted by this program.
+There is the possibly that this is the third scope that I will be targeting with this program. This scope as two 8 bit ADC of 1 Gig sample / second used for each of the 2 pairs of channels, totalizing 4 channels. 
 
 ### **D** - Other possible scopes targeted by the program directly by me
 
