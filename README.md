@@ -154,6 +154,64 @@ This code is under the directory. <br>
 
 2. ....
 
+
+## Recommended reading books and videos and bibliography
+
+**The central component of this project** is the complex equalization of the input signal converted from the time domain to the frequency domain.  What I said that will make the correction or the process of revert the natural effect of distortion in the scope path on the signal and try to obtain a more real representation of the original signal. <br>
+<br>
+To do this you need **the “powers” of the FFT** – Fast Fourier Transform.
+I would like to give here some links and info so that all can follow the concepts for this project journey as it is being made. <br>
+<br>
+Note: **I know that the majority of you know much more about Systems and Signals, about DSP – Digital Signal Processing, about Control Theory that I could even dream off knowing.** But for the ones that know less than me or for the ones that want to refresh their knowledge, I have put here what I think are nice pointers and nice sources of info about FFT and DSP in general. <br>
+<br>
+**Start with this nice video about FFT**. <br>
+Discrete Fourier Transform - Simple Step by Step <br>
+[https://www.youtube.com/watch?v=mkGsMWi_j4Q](https://www.youtube.com/watch?v=mkGsMWi_j4Q) <br>
+<br>
+Then see the following video from **3Blue1Brown**: <br>
+But what is the Fourier Transform? A visual introduction. <br>
+[https://www.youtube.com/watch?v=spUNpyF58BY](https://www.youtube.com/watch?v=spUNpyF58BY) <br>
+<br>
+Then see the following youtube **play list** about the FFT Transform, there are really good videos on here, they are well worth your time. <br>
+[https://www.youtube.com/playlist?list=PL7HEDXv3wHPNCKVActVkD-OL1C7deqHGC](https://www.youtube.com/playlist?list=PL7HEDXv3wHPNCKVActVkD-OL1C7deqHGC) <br>
+<br>
+And **if you want to go deeper** see the following **Fourier Analysis** 36 videos list from Steve Brunton. <br>
+[https://www.youtube.com/watch?v=jNC0jxb0OxE&list=PLMrJAkhIeNNT_Xh3Oy0Y4LTj0Oxo8GqsC](https://www.youtube.com/watch?v=jNC0jxb0OxE&list=PLMrJAkhIeNNT_Xh3Oy0Y4LTj0Oxo8GqsC) <br>
+<br>
+Then **hit the books** …… there are three books that **I highly recommend**, specially the first one, and they are all well worth reading:
+
+1. **Understanding Digital Signal Processing 3rd Edition** <br>
+   by Richard G. Lyons
+
+2. **Digital Signal Processing in Modern Communication Systems** <br>
+   by Andreas Schwarzinger
+
+3. **The Fast Fourier Transform FFT and its applications** <br>
+   By E. Oran Brigham
+
+<br>
+And there are two free DSP book authors and they also cover the FFT very well:
+<br>
+
+1. **The Scientist & Engineer's Guide to Digital Signal Processing** <br>
+   by Steven W. Smith <br>
+   [http://www.dspguide.com/](http://www.dspguide.com/)
+
+2. **Mathematics of the discrete Fourier transform (DFT) with audio applications**, Second edition <br>
+   by Julius O. Smith III <br>
+   https://ccrma.stanford.edu/~jos/mdft/
+
+3. **Introduction to digital filters with audio applications** <br>
+   by Julius O. Smith III <br>
+   [https://ccrma.stanford.edu/~jos/filters/](https://ccrma.stanford.edu/~jos/filters/)
+
+4. **Spectral audio signal processing** <br>
+   by Julius O. Smith III <br>
+   [https://ccrma.stanford.edu/~jos/sasp/](https://ccrma.stanford.edu/~jos/sasp/)
+
+
+Note: The **last three should be read by the order** they are listed.
+
 ## License
 MIT Open Source license.
 
