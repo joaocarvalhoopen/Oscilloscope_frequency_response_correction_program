@@ -189,8 +189,7 @@ Then **hit the books** …… there are three books that **I highly recommend**,
 3. **The Fast Fourier Transform FFT and its applications** <br>
    By E. Oran Brigham
 
-<br>
-And there are two free DSP book authors and they also cover the FFT very well:
+And there are two **free DSP book authors** and they also cover the FFT very well:
 <br>
 
 1. **The Scientist & Engineer's Guide to Digital Signal Processing** <br>
