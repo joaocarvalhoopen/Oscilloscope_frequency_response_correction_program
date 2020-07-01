@@ -189,22 +189,26 @@ Then **hit the books** …… there are three books that **I highly recommend**,
 3. **The Fast Fourier Transform FFT and its applications** <br>
    By E. Oran Brigham
 
-And there are two **free DSP book authors** and they also cover the FFT very well:
+And there are five **free DSP book authors** and they also cover the FFT very well:
 <br>
 
 1. **The Scientist & Engineer's Guide to Digital Signal Processing** <br>
    by Steven W. Smith <br>
    [http://www.dspguide.com/](http://www.dspguide.com/)
 
-2. **Mathematics of the discrete Fourier transform (DFT) with audio applications**, Second edition <br>
-   by Julius O. Smith III <br>
-   https://ccrma.stanford.edu/~jos/mdft/
+2. **Introduction to Signal Processing** <br>
+   by Sophocles J. Orfanidis <br>
+   [https://www.ece.rutgers.edu/~orfanidi/intro2sp/](https://www.ece.rutgers.edu/~orfanidi/intro2sp/)
 
-3. **Introduction to digital filters with audio applications** <br>
+3. **Mathematics of the discrete Fourier transform (DFT) with audio applications**, Second edition <br>
+   by Julius O. Smith III <br>
+   [https://ccrma.stanford.edu/~jos/mdft/](https://ccrma.stanford.edu/~jos/mdft/)
+
+4. **Introduction to digital filters with audio applications** <br>
    by Julius O. Smith III <br>
    [https://ccrma.stanford.edu/~jos/filters/](https://ccrma.stanford.edu/~jos/filters/)
 
-4. **Spectral audio signal processing** <br>
+5. **Spectral audio signal processing** <br>
    by Julius O. Smith III <br>
    [https://ccrma.stanford.edu/~jos/sasp/](https://ccrma.stanford.edu/~jos/sasp/)
 
